@@ -123,13 +123,16 @@ modules:
           - --enable-samples
         sources:
           - type: archive
-            url: https://downloads.sourceforge.net/gsoap2/gsoap_2.8.142.zip
-            sha256: 6d7196bd6591ec2977474c681e351b4a33eb5c2d64c9e2e6727b004f330b3752
+            url: https://downloads.sourceforge.net/gsoap2/gsoap_2.8.139.zip
+            sha256: 91ef29080711b5a5f110be3e228c3d7bfc66a88d241720de40a62204bdf2e0b3
             x-checker-data:
               type: anitya
               stable-only: true
               project-id: 1260
               url-template: https://downloads.sourceforge.net/gsoap2/gsoap_$version.zip
+            # upgrading this to 140+ makes virtualbox not compile
+              versions:
+                <: 2.8.140
       - name: yasm
         cleanup:
           - '*'
