@@ -90,7 +90,7 @@ modules:
       - shared-modules/glu/glu-9.json
       - name: pam
         config-opts:
-          - -Dvendordir=${FLATPAK_PREFIX}/pam
+          - -Dvendordir=/app/pam
         buildsystem: meson
         cleanup:
           - /bin
